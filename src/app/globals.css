@@ -25,3 +25,79 @@ body {
     text-wrap: balance;
   }
 }
+
+.movie-title {
+  display: flex;
+  font-size: 28px;
+}
+
+.title-sub {
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.divider {
+  margin: 0px 10px;
+  border: 1px solid;
+  width: 1px;
+}
+
+.overview {
+  width: 100vh;
+  margin: 30px 0;
+}
+
+.detail-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.field-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.field-value {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.details-page {
+  position: relative;
+}
+
+.cover-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.details-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+}
+
+.details-column {
+  padding: 20px 30px;
+}
+
+.header {
+  height: 70px;
+    background: #000000;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 5%;
+    font-size: 30px;
+    font-weight: bold;
+}

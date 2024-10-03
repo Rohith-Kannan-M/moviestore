@@ -1,12 +1,12 @@
 'use client'
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { IMAGE_URL } from "./constant";
 
 export default function Home() {
 
   const router = useRouter();
   const [moviesData, setMoviesData] = useState([]);
-  const imageURL = 'https://image.tmdb.org/t/p/w500/';
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -22,10 +22,15 @@ export default function Home() {
 
   useEffect(() => {
     const fetchMoviesData = async () => {
+      // const res = await apiClient.get(`/api/movies`, {
+      //   method: 'GET'
+      // });
       const res = await fetch(`/api/movies`, {
         method: 'GET'
       });
       const resp = await res.json();
+      // console.log(res);
+      // const resp: any = res;
       console.log(resp);
       setMoviesData(resp.results);
     }
@@ -44,10 +49,10 @@ export default function Home() {
       margin: '0px 20px',
       justifyContent: 'center'
     }}>
-      {moviesData.map((movie: any, index: number) => (
+      {moviesData && moviesData.map((movie: any, index: number) => (
         <div key={index} style={{ padding: '20px' }} onClick={() => handleClick(movie.id)}>
           <div>
-            <img src={imageURL + movie.poster_path} alt="Example" width="300" height="300" />
+            <img src={IMAGE_URL + movie.poster_path} alt="Example" width="300" height="300" />
           </div>
           <div>{ movie.title }</div>
           <div style={{ fontSize: 12 }}>{ formatDate(movie.release_date) }</div>
