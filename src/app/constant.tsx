@@ -1,0 +1,3 @@
+export const AUTHORIZATION_CODE = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMzRjMjE4ZDRhZDMxMjZjNTg5ZDQwNDA3MGU2NGVmMyIsIm5iZiI6MTcyNzg5OTMwOC44MDEzMywic3ViIjoiNjZmZGE1MjMxNTkyZWYxYmE5ODRiNmJiIiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.6yGotcgWtQv24bptEcwmeXv4orbVYIyDnX_irV5Jqq4';
+export const IMAGE_URL = 'https://image.tmdb.org/t/p/w500/';
+export const APP_TITLE = 'Movie Store';
