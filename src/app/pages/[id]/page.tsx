@@ -1,11 +1,10 @@
 'use client'
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Home() {
   const params = useParams();
   console.log("Params:", params);
-    const router = useRouter();
     const [movieDetails, setMovieDetails] = useState<any>();
 
   useEffect(() => {
@@ -19,7 +18,8 @@ export default function Home() {
     }
 
     fetchMoviesData();
-  }, []);
+  }, [params]);
+
   return (
     <div>
           { movieDetails?.overview }

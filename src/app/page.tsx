@@ -44,11 +44,13 @@ export default function Home() {
       margin: '0px 20px',
       justifyContent: 'center'
     }}>
-      {moviesData.map((movie: any) => (
-        <div style={{ padding: '20px' }} onClick={() => handleClick(movie.id)}>
+      {moviesData.map((movie: any, index: number) => (
+        <div key={index} style={{ padding: '20px' }} onClick={() => handleClick(movie.id)}>
+          <div>
           <img src={imageURL + movie.poster_path} alt="Example" width="300" height="300" />
+          </div>
           <div>{ movie.title }</div>
-          <div>{ formatDate(movie.release_date) }</div>
+          <div style={{ fontSize: 12 }}>{ formatDate(movie.release_date) }</div>
         </div>
       ))}
     </div>

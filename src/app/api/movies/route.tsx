@@ -8,7 +8,7 @@ const options = {
     }
 };
 
-export async function GET(request: any) {
+export async function GET() {
     const res = (await fetch('https://api.themoviedb.org/3/discover/movie?&include_video=false&language=en-US&page=1', options));
     const resp = JSON.stringify((await res.json()));
     return new NextResponse(resp, {
