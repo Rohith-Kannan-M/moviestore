@@ -9,7 +9,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchMoviesData = async () => {
-      const res = await fetch(`http://localhost:3000/api/movies/${params.id}`, {
+      const res = await fetch(`/api/movies/${params.id}`, {
         method: 'GET'
       });
       const resp = await res.json();
