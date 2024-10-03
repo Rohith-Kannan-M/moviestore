@@ -43,19 +43,14 @@ export default function Home() {
   }
 
   return (
-    <div style={{
-      display: 'flex',
-      flexFlow: 'wrap',
-      margin: '0px 20px',
-      justifyContent: 'center'
-    }}>
+    <div className="movie-list">
       {moviesData && moviesData.map((movie: any, index: number) => (
-        <div key={index} style={{ padding: '20px' }} onClick={() => handleClick(movie.id)}>
+        <div key={index} className="movie-card" onClick={() => handleClick(movie.id)}>
           <div>
             <img src={IMAGE_URL + movie.poster_path} alt="Example" width="300" height="300" />
           </div>
           <div>{ movie.title }</div>
-          <div style={{ fontSize: 12 }}>{ formatDate(movie.release_date) }</div>
+          <div className="movie-date">{ formatDate(movie.release_date) }</div>
         </div>
       ))}
     </div>

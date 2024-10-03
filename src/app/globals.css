@@ -93,11 +93,31 @@ body {
 
 .header {
   height: 70px;
-    background: #000000;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding: 0 5%;
-    font-size: 30px;
-    font-weight: bold;
+  background: #000000;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 5%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.movie-list {
+  display: flex;
+  flex-flow: wrap;
+  margin: 0px 20px;
+  justify-content: center;
+}
+
+.movie-card {
+  padding: 20px;
+  cursor: pointer;
+}
+
+.movie-date {
+  font-size: 12px;
+}
+
+.app-title {
+  cursor: default;
 }
